@@ -61,7 +61,7 @@ function App() {
 
   const filteredTodos = useMemo(() => {
     return todos
-      .filter(todo => {
+      .filter((todo: ToDo) => {
         if (filterStatus === 'active') return !todo.completed;
         if (filterStatus === 'completed') return todo.completed;
         return true;
